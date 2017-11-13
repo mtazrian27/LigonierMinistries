@@ -7,6 +7,7 @@ import framework.HomePage;
 import framework.LoginPage;
 import framework.TestRunner;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 /**
  * Created by mohammadmuntakim on 6/9/17.
@@ -72,5 +73,14 @@ public class LoginSD {
     @Then("^I verify invalid signup error message$")
     public void verifySignUpErrorMessage() {
         Assert.assertEquals(homePage.getErrorMessage(), "Invalid signup");
+    }
+
+    @Test
+    public boolean sampleCode() {
+        //TODO: delete this code
+        if ("name".isEmpty()) {
+            return true;
+        }
+        return false;
     }
 }

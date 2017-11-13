@@ -17,7 +17,6 @@ Feature: Login feature
     And I enter abc1234 into password text fields on home screen
     And I click on login button on home screen
     Then I verify that i am an invalid login page
-    And I see number 12 in text field
 
   @regression-3
   Scenario Outline: Verify Invalid Login for multiple users
