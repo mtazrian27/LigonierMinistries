@@ -1,7 +1,6 @@
 package framework;
 
 import org.openqa.selenium.By;
-import ru.yandex.qatools.allure.annotations.Step;
 
 public class HomePage extends BasePage{
 
@@ -13,7 +12,7 @@ public class HomePage extends BasePage{
 	private By mobileNumberTextField = By.id("mobileNumber");
 	private By newPasswordTextField = By.id("newPwd");
 	private By errorMessage = By.id("errorMessage");
-	
+
 	public void clickOnLoginButton() {
 		clickOn(loginButton);
 	}

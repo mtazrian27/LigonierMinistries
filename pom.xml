@@ -3,24 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>ru.yandex.qatools.allure</groupId>
         <artifactId>allure-examples-parent</artifactId>
         <version>1.0</version>
     </parent>
-
     <groupId>CucumberSample</groupId>
     <artifactId>com.cucumber.sample</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <allure.version>1.4.23</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.testng</groupId>
@@ -77,8 +73,13 @@
             <artifactId>allure-cucumber-jvm-adaptor</artifactId>
             <version>1.5.1</version>
         </dependency>
+        <dependency>
+            <groupId>backport-util-concurrent</groupId>
+            <artifactId>backport-util-concurrent</artifactId>
+            <version>3.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -86,7 +87,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
-
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
@@ -111,7 +111,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
             <!--Needed only to show reports locally. Run jetty:run and
             open localhost:8080 to show the report-->
             <plugin>
@@ -126,7 +125,6 @@
             </plugin>
         </plugins>
     </build>
-
     <reporting>
         <excludeDefaults>true</excludeDefaults>
         <plugins>

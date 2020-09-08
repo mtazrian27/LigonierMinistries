@@ -22,6 +22,7 @@ public class SharedSD {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(configReader.getUrl());
+		driver.manage().window().maximize();
 	}
 
 	@After

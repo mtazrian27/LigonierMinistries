@@ -6,18 +6,18 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		// This creates cucumber reports
+        // This creates cucumber reports
         plugin = {"pretty", "html:target/site/cucumber-pretty"},
         //This create auto method name in camelCase
         snippets = cucumber.api.SnippetType.CAMELCASE,
-        
+
         //Path to your feature file
         features = {"src/test/resources/features"},
         // Specify tags to be executed
-        tags = {"@regression-3"},
-        //Specify step definition package name (Note: make sure to have this package on current directory) 
+        tags = {"@ligonierShopify"},
+        //Specify step definition package name (Note: make sure to have this package on current directory)
         glue = {"stepdefinition"}
 )
 public class TestRunner {
-	
+
 }

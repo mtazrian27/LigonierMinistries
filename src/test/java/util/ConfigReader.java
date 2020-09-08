@@ -5,9 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-/**
- * Created by Mohammad Mutakim on 11/11/17.
- */
 public class ConfigReader {
 
     private String url;
